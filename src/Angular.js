@@ -205,6 +205,7 @@ msie = window.document.documentMode;
  *                   String ...)
  */
 function isArrayLike(obj) {
+  // TODO: Clean this tf up
 
   // `null`, `undefined` and `window` are not array-like
   if (obj == null || isWindow(obj)) return false;
@@ -262,6 +263,7 @@ function isArrayLike(obj) {
  */
 
 function forEach(obj, iterator, context) {
+  // HACK: wtaf?
   var key, length;
   if (obj) {
     if (isFunction(obj)) {
